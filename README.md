@@ -11,4 +11,16 @@ I may also use tremor and vite in my React to help make the UI look more appeali
 
 For the booking database, i will be using this tutorial https://www.geeksforgeeks.org/restaurant-reservation-system-using-mern-stack/ and change it to be more according to my app.
 
+
+npm create vite@latest
+
+cd vite project
+
+npm install
+
+npm create vite@latest my-project -- --template react
+cd my-project
+
 npm run dev
+
+INSTALL POSTCSS LANGUAGE SUPPORT
