@@ -24,3 +24,8 @@ cd my-project
 npm run dev
 
 INSTALL POSTCSS LANGUAGE SUPPORT
+
+npm install axios
+
+npm install cors
+

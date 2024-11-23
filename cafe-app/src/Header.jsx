@@ -23,7 +23,7 @@ export default function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
             </svg>
-            <span className="font-bold text-sm pl-1 mr-2">Find our cafe</span>
+            <Link to={'/location'} className="font-bold text-sm pl-1 mr-2">Find our cafe</Link>
             <Link to={'/register'} className="font-bold text-sm mr-2 px-3 py-1 bg-black text-white border border-black rounded-full">Join now</Link>
             <Link to={'/login'} className="font-bold text-sm mr-2 px-3 py-1 border border-black rounded-full">Sign in</Link>
             </div>

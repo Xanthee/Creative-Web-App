@@ -4,6 +4,6 @@
 @tailwind utilities;
 
 
-input[type="text"], input[type="password"], input[type="email"] {
+input[type="text"], input[type="password"], input[type="email"], input[type="name"]{
     @apply w-96 border border-slate-500 rounded-md p-2;
   }
