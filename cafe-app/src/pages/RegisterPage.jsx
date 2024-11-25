@@ -9,7 +9,7 @@ export default function RegisterPage(){
     
     function registerUser(ev) {
         ev.preventDefault();
-        axios.get('http://localhost:4000/test');
+        axios.get('http://127.0.0.1:3000/test');
     }
     return (
         <div className="m-12">
