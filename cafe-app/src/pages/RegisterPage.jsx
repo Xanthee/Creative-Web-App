@@ -6,11 +6,15 @@ export default function RegisterPage(){
     const [name,setName] = useState('');
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
-    
     function registerUser(ev) {
         ev.preventDefault();
-        axios.get('http://127.0.0.1:3000/test');
+        axios.post('/register', {
+            name,
+            email,
+            password,
+        });
     }
+
     return (
         <div className="m-12">
             <div className="flex flex-col">

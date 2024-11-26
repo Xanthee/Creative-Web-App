@@ -5,6 +5,9 @@ import LoginPage from "./pages/LoginPage.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import LocationPage from "./pages/LocationPage.jsx";
 import Layout from "./Layout";
+import axios from 'axios';
+
+axios.defaults.baseURL = "http://127.0.0.1:3000";
 
 function App() {
   return (
