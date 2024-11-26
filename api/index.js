@@ -15,4 +15,4 @@ app.post('/register', (req,res) => {
     res.json({name,email,password});
 })
 
-app.listen(4000);
+app.listen(3000);
