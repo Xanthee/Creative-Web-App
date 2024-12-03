@@ -23,27 +23,37 @@ export default function IndexPage() {
         </div>
 
 
-            <div className="flex justify-center">
-                <div className="flex flex-row m-6">
-                    <div className="m-2">
-                        <img src={coffeeMachineImg} alt="Coffee Machine Image" height={120} width={120} className="border border-transparent rounded-full"/>  
-                        <h1>A</h1>
+        <div className="flex justify-center" >
+            <div className="flex flex-row m-6">
+                <div className="m-2">
+                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={120} width={120} className="border border-transparent rounded-full"/>  
+                    <h1>A</h1>
+                    <p>hello world</p>
+                </div>
+                <div className="m-2">
+                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={120} width={120} className="border border-transparent rounded-full"/>
+                    <h1>B</h1>
+                    <p>hello world</p>
+                </div>
+                <div className="m-2">
+                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={120} width={120} className="border border-transparent rounded-full"/>  
+                    <div className="">
+                        <h1>C</h1>
                         <p>hello world</p>
-                    </div>
-                    <div className="m-2">
-                        <img src={coffeeMachineImg} alt="Coffee Machine Image" height={120} width={120} className="border border-transparent rounded-full"/>
-                        <h1>B</h1>
-                        <p>hello world</p>
-                    </div>
-                    <div className="m-2">
-                        <img src={coffeeMachineImg} alt="Coffee Machine Image" height={120} width={120} className="border border-transparent rounded-full"/>  
-                        <div className="">
-                            <h1>C</h1>
-                            <p>hello world</p>
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div className="flex ">
+
+            <div className="flex col bg-green-900 items-center border rounded-lg w-full">
+                <span className="text-white text-2xl p-6">Sign up today and get a free drink on us!</span>
+                <img src={coffeeMachineImg} alt="Coffee Machine Image" height={400} width={400} className="border border-transparent p-3 rounded-lg"/>
+            </div>
+        </div>
+        
+
 
     </div>
 
