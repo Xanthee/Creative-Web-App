@@ -7,7 +7,7 @@ export default function IndexPage() {
     return (
 
     <div className="flex flex-col w-auto h-auto p-3">
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-20">
 
             <div className="flex flex-row bg-green-900 items-center border rounded-lg">
                 <img src={coffeeMachineImg} alt="Coffee Machine Image" height={400} width={400} className="border border-transparent p-3 rounded-lg"/>
@@ -18,38 +18,35 @@ export default function IndexPage() {
             </div>
         </div>
 
-        <div className="flex justify-center m-5">
+        <div className="flex justify-center mt-5 mb-20">
             <span className="text-2xl font-bold">Say hello to easy ordering, endless choice and - yes, free coffee.</span>
         </div>
 
-        <div className="flex flex-row justify-evenly pt-10 pb-10" >
-                <div className="m-2">
-                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={200} width={200} className="border border-transparent rounded-full"/>  
-                    <h1 className="text-center">A</h1>
-                    <p className="text-center">hello world</p>
+        <div className="flex flex-row justify-evenly pb-20" >
+                <div className="bg-green-900 border rounded-lg w-full m-2 w-60 h-96">
+                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={200} width={200} className="border border-transparent rounded-full m-5"/>  
+                    <h1 className="font-semibold text-2xl text-white text-center">Lorem ipsum</h1>
+                    <p className="text-center text-white p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                 </div>
-                <div className="m-2">
-                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={200} width={200} className="border border-transparent rounded-full"/>
-                    <h1 className="text-center">B</h1>
-                    <p className="text-center">hello world</p>
+                <div className="bg-green-900 border rounded-lg w-full m-2 w-60 h-96">
+                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={200} width={200} className="border border-transparent rounded-full m-5"/>
+                    <h1 className="font-semibold text-2xl text-white text-center">Lorem ipsum</h1>
+                    <p className="text-center text-white p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                 </div>
-                <div className="m-2">
-                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={200} width={200} className="border border-transparent rounded-full"/>  
-                    <h1 className="text-center">C</h1>
-                    <p className="text-center">hello world</p>
+                <div className="bg-green-900 border rounded-lg w-full m-2 w-60 h-96">
+                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={200} width={200} className="border border-transparent rounded-full m-5"/>  
+                    <h1 className="font-semibold text-2xl text-white text-center">Lorem ipsum</h1>
+                    <p className="text-center text-white p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                 </div>
         </div>
 
-
-
-            <div className="flex row bg-green-900 items-center border rounded-lg w-full">
-                <div className="p-10">
-                    <h1 className="pb-8 text-white text-5xl">Lorem ipsum</h1>
-                    <p className="text-white text-2xl ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <img src={coffeeMachineImg} alt="Coffee Machine Image" height={550} width={550} className="border border-transparent p-3 rounded-lg flex flex-row-reverse "/>
+        <div className="flex row bg-green-900 items-center border rounded-lg w-full mt-10">
+            <div className="p-10">
+                <h1 className="pb-8 text-white text-5xl">Lorem ipsum</h1>
+                <p className="text-white textxl ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-
+            <img src={coffeeMachineImg} alt="Coffee Machine Image" height={550} width={550} className="border border-transparent p-3 rounded-lg"/>
+        </div>
         
 
 
