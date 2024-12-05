@@ -24,19 +24,19 @@ export default function IndexPage() {
 
         <div className="flex flex-row justify-evenly pt-10 pb-10" >
                 <div className="m-2">
-                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={120} width={120} className="border border-transparent rounded-full"/>  
-                    <h1 className="flex items-center">A</h1>
-                    <p>hello world</p>
+                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={200} width={200} className="border border-transparent rounded-full"/>  
+                    <h1 className="text-center">A</h1>
+                    <p className="text-center">hello world</p>
                 </div>
                 <div className="m-2">
-                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={120} width={120} className="border border-transparent rounded-full"/>
-                    <h1>B</h1>
-                    <p>hello world</p>
+                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={200} width={200} className="border border-transparent rounded-full"/>
+                    <h1 className="text-center">B</h1>
+                    <p className="text-center">hello world</p>
                 </div>
                 <div className="m-2">
-                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={120} width={120} className="border border-transparent rounded-full"/>  
-                    <h1>C</h1>
-                    <p>hello world</p>
+                    <img src={coffeeMachineImg} alt="Coffee Machine Image" height={200} width={200} className="border border-transparent rounded-full"/>  
+                    <h1 className="text-center">C</h1>
+                    <p className="text-center">hello world</p>
                 </div>
         </div>
 
