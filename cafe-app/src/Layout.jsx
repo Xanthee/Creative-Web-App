@@ -6,8 +6,8 @@ export default function Layout() {
     return(
         <div className="p-4 flex flex-col">
             <Header />
-            <Footer />
             <Outlet />
+            <Footer />
         </div>
     );
 }

@@ -3,12 +3,15 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const { ServerMonitoringMode } = require('mongodb');
 require('dotenv').config();
+const app = express();
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
 
 mongoose
     .connect(process.env.MONGO_URI)
     .then(async () => {
         console.log('db connected');
-        const app = express();
+        // const app = express();
 
         // Define a Schema
         const userSchema = new mongoose.Schema({
@@ -27,6 +30,7 @@ mongoose
         app.post('/register',async(req, res) => {
             try {
                 const {username, email, password} = req.body;
+
                 const newUser = new userInfo({username, email, password})
                 const savedUser = await newUser.save();
                 console.log(savedUser);

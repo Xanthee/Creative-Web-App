@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import axios from "axios";
 import { useState } from "react";
 
-export default function RegisterPage() {
+function RegisterPage() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -10,14 +10,15 @@ export default function RegisterPage() {
 
     
     function registerUser(e) {
+        console.log(username)
         e.preventDefault();
-        axios.post('/register', {
-            username,
-            email,
-            password,
+        axios.post('http://127.0.0.1:5000/register', {
+            username: username,
+            email: email,
+            password: password,
         })
-            .then(result => console.log(result))
-            .catch(err => console.log(err));
+            .then(result => console.log("res",result))
+            .catch(err => console.log("error",err));
     }
 
 
@@ -64,3 +65,5 @@ export default function RegisterPage() {
     );
 }
 
+
+export default RegisterPage;
