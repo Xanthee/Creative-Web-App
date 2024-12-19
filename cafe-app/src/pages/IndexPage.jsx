@@ -2,7 +2,9 @@ import { Link } from "react-router-dom"
 import Header from "../Header";
 import React from 'react';
 import coffeeMachineImg from '../assets/coffeeMachine.png';
+import ReviewSlider from '../components/ReviewSlider.jsx';
 import "../index.css";
+
 export default function IndexPage() {
     return (
 
@@ -23,17 +25,17 @@ export default function IndexPage() {
         </div>
 
         <div className="flex flex-row justify-evenly pb-20" >
-                <div className="bg-green-900 border rounded-lg w-full m-2 w-60 h-96">
+                <div className="bg-green-900 border rounded-lg w-full m-2 w-2/6 h-96">
                     <img src={coffeeMachineImg} alt="Coffee Machine Image" height={200} width={200} className="border border-transparent rounded-full m-5"/>  
                     <h1 className="font-semibold text-2xl text-white text-center">Lorem ipsum</h1>
                     <p className="text-center text-white p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                 </div>
-                <div className="bg-green-900 border rounded-lg w-full m-2 w-60 h-96">
+                <div className="bg-green-900 border rounded-lg w-full m-2 w-2/6 h-96">
                     <img src={coffeeMachineImg} alt="Coffee Machine Image" height={200} width={200} className="border border-transparent rounded-full m-5"/>
                     <h1 className="font-semibold text-2xl text-white text-center">Lorem ipsum</h1>
                     <p className="text-center text-white p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
                 </div>
-                <div className="bg-green-900 border rounded-lg w-full m-2 w-60 h-96">
+                <div className="bg-green-900 border rounded-lg w-full m-2 w-2/6 h-96">
                     <img src={coffeeMachineImg} alt="Coffee Machine Image" height={200} width={200} className="border border-transparent rounded-full m-5"/>  
                     <h1 className="font-semibold text-2xl text-white text-center">Lorem ipsum</h1>
                     <p className="text-center text-white p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
@@ -48,7 +50,11 @@ export default function IndexPage() {
             <img src={coffeeMachineImg} alt="Coffee Machine Image" height={550} width={550} className="border border-transparent p-3 rounded-lg"/>
         </div>
         
+        <div className="flex justify-center mt-5">
+            <span className="text-3xl font-bold">Discover what our customers love about us.</span>
+        </div>
 
+        <ReviewSlider />
 
     </div>
 
