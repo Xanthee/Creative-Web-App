@@ -1,33 +1,107 @@
-import { Link } from "react-router-dom"
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-//NOTE: Having header as its own seperate file, we can access header as an object in each page. MUST BE IMPORTED FIRST
-export default function Header() {
-    return(
-        <header className="p-4 flex justify-between items-center">
-            <a href="" className="flex items-center gap-1">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-9 -rotate-45">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
-            </svg>
-            <span className="font-bold text-xl">Cafe</span>
-            </a>
+const Header = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuVisible, setMenuVisible] = useState(false); // for animation timing
+  const delays = ['delay-450', 'delay-600', 'delay-750', 'delay-900', 'delay-1050'];
+  
+  // Scroll-hide header
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsVisible(currentScrollY < lastScrollY || currentScrollY <= 50);
+      setLastScrollY(currentScrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
-            <div className="flex p-3 pl-10 ">
-            <div className="pr-2 font-bold text-l">Menu</div>
-            <div className="px-2 font-bold text-l">Book a table</div>   
-            <div className="px-2 font-bold text-l">Our coffee</div>     
-            <div className="px-2 font-bold text-l">About us</div>     
-            </div>
+  // Lock body scroll
+  useEffect(() => {
+    document.body.style.overflow = menuVisible ? 'hidden' : 'auto';
+  }, [menuVisible]);
 
-            <div className="flex p-3 items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-            </svg>
-            <Link to={'/location'} className="font-bold text-sm pl-1 mr-2">Find our cafe</Link>
-            <Link to={'/register'} className="font-bold text-sm mr-2 px-3 py-1 bg-black text-white border border-black rounded-full">Join now</Link>
-            <Link to={'/login'} className="font-bold text-sm mr-2 px-3 py-1 border border-black rounded-full">Sign in</Link>
-            </div>
+  // Open menu
+  const openMenu = () => {
+    setMenuVisible(true);
+    setTimeout(() => setMenuOpen(true), 10); // trigger animation
+  };
 
-        </header>
-    );
-}
+  // Close menu
+  const closeMenu = () => {
+    setMenuOpen(false); // trigger slide-out
+    setTimeout(() => setMenuVisible(false), 700); // match transition duration
+  };
+
+  return (
+    <>
+      {/* Header */}
+      <header
+        className={`fixed top-0 left-0 right-0 z-30 transition-transform duration-300
+        ${isVisible ? 'translate-y-0' : '-translate-y-full'} 
+        bg-[#b5b0a8] shadow-md p-6 flex justify-between items-center`}
+      >
+        <h1 className="font-bold text-3xl text-black">X</h1>
+
+        {!menuVisible && (
+          <button
+            onClick={openMenu}
+            className="text-xl text-black font-josefin font-light"
+          >
+            MENU
+          </button>
+        )}
+      </header>
+
+      {/* Fullscreen Menu Overlay */}
+      {menuVisible && (
+        <div
+          className={`fixed inset-0 z-50 bg-[#b5b0a8] flex flex-col items-center justify-center
+          transform transition-transform duration-700
+          ${menuOpen ? 'translate-y-0' : '-translate-y-full'}
+        `}
+        >
+          {/* CLOSE button */}
+          <button
+            onClick={closeMenu}
+            className="absolute top-7 right-7 text-xl font-josefin font-light"
+            
+          >
+            CLOSE
+          </button>
+
+          {/* Links */}
+          <ul className="space-y-10 text-[60px] md:text-[50px] lg:text-[60px] font-light text-[#675578] text-right w-1/2">
+            {['HOME', 'ABOUT', 'PROJECTS', 'CONTACT'].map((text, i) => (
+              <li
+                key={text}
+                className={`transform transition-all duration-1050 ease-out
+                  ${menuOpen ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'} 
+                  ${delays[i]}`}
+              >
+                <Link
+                  to={text === 'HOME' ? '/' : `/${text.toLowerCase()}`}
+                  onClick={closeMenu}
+                  className="relative inline-block group hover:opacity-50 transition-opacity duration-300"
+                >
+                  {text}
+                  <span
+                    className={`absolute left-0 -bottom-2 h-[3px] bg-[#7c6a8a] transition-all duration-[1500ms]
+                      ${menuOpen ? 'w-full' : 'w-0'}`}
+                    style={{ transitionDelay: menuOpen ? delays[i].replace('delay-', '') + 'ms' : '0ms' }}
+                  ></span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+        </div>
+      )}
+    </>
+  );
+};
+
+export default Header;
