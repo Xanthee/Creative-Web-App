@@ -3,7 +3,7 @@ import { FaLinkedin , FaInstagram, FaGithub } from "react-icons/fa";
 
 export default function Footer() {
     return(
-        <footer className="vw-full flex flex-col m-3 p-5 border rounded-lg bg-[#2e2d2b] h-[22vh] text-white">
+        <footer className="vw-full flex flex-col m-3 p-5 border rounded-lg bg-[#331C20] h-[22vh] text-white">
             <hr className="border-t border-gray-600 my-2" />
             <div className="flex flex-row h-full w-full pl-2 pr-2">
                 <span className="text-left font-light text-2xl w-1/4 h-full mr-4 text-base hover:text-3xl hover:tracking-wide font-tech transition-all duration-300"> Designed with curiosity and a lot of coffee</span>

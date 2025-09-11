@@ -5,9 +5,16 @@ import LunaCafeWebsite from '../assets/LunaCafeWebsite.jpeg';
 import PortfolioWebsite from '../assets/PortfolioWebsite.jpeg';
 import BRLSI from '../assets/BRLSI.jpeg';
 import SugarWebsite from '../assets/SugarWebsite.jpeg';
+import UseByApp from '../assets/UseByApp.jpeg';
+import AccessibleWells from '../assets/AccessibleWells.jpeg';
 import PortfolioDesign from '../assets/PortfolioDesign.jpeg';
 import HouseModel from '../assets/3DModel.jpeg';
 import Bitsy from '../assets/Bitsy.jpeg';
+import Athena from '../assets/Athena.jpeg';
+import UseByDesign from '../assets/UseByDesign.jpeg';
+import PlanetModels from '../assets/3DPlanets.jpeg';
+import MouseExperiment from '../assets/MouseExperiment.jpeg';
+import LunaCafeDesign from '../assets/LunaCafeDesign.jpeg';
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -62,12 +69,12 @@ const Tabs = () => {
       projects: [
         {
           title: "UseBy",
-          image: "/images/native1.png",
+          image: UseByApp,
           description: "A mobile app that stores food products expiry dates and tracks them for you."
         },
         {
           title: "Athena",
-          image: "/images/react3.png",
+          image: Athena,
           description: "Mobile application to resell and advertise computing peripherals."
         }
       ]
@@ -78,7 +85,7 @@ const Tabs = () => {
       projects: [
         {
           title: "Accessible Wells",
-          image: "/images/wp1.png",
+          image: AccessibleWells,
           description: "A website made for a charity."
         }
       ]
@@ -94,7 +101,7 @@ const Tabs = () => {
         },
         {
           title: "Mouse movement in React",
-          image: "/images/wp1.png",
+          image: MouseExperiment,
           description: "I drew different layers that moved based on mouse movement"
         },
         {
@@ -106,6 +113,27 @@ const Tabs = () => {
           title: "3D Modelling environments",
           image: HouseModel,
           description: "Trying Blender and creating an environment from my own skills."
+        }
+      ]
+    },
+    {
+      id: 5,
+      title: "Designs",
+      projects: [
+        {
+          title: "UseBy",
+          image: UseByDesign,
+          description: "Using Figma, I was able to create this UI for the app."
+        },
+        {
+          title: "Luna Cafe",
+          image: LunaCafeDesign,
+          description: "This was created in Figma to map out the website UI."
+        },
+        {
+          title: "3D Modelling Planets",
+          image: PlanetModels,
+          description: "Using Spline to create and learn the different ways to 3D model"
         }
       ]
     }
@@ -124,14 +152,14 @@ const Tabs = () => {
   return (
     <div className="w-full mt-28">
       <div className="flex justify-center mb-6">
-        <span className="left-nav-link text-3xl font-bold">PROJECTS</span>
+        <span className="left-nav-link text-3xl font-light uppercase">PROJECTS</span>
       </div>
       <div className="flex justify-center mb-4">
         {tabContent.map((tab, index) => (
           <button
             key={tab.id}
-            className={`px-4 py-2 mx-1 uppercase font-thin text-xl mr-4 transition-colors duration-300 ${
-              activeTab === index ? 'bg-[#1b2422] text-[#c1dbce]' : 'text-[#1b2422]'
+            className={`px-4 py-2 mx-1 uppercase font-light text-xl mr-4 transition-colors duration-300 ${
+              activeTab === index ? 'bg-[#331C20] text-[#EEDEE0]' : 'text-[#331C20]'
             }`}
             onClick={() => handleTabClick(index)}
           >
@@ -139,7 +167,7 @@ const Tabs = () => {
           </button>
         ))}
       </div>
-      <div className="p-8 text-[#c1dbce] font-josefin font-light rounded-xl">
+      <div className=" text-[#EEDEE0] font-josefin font-light rounded-xl">
         <div
           className={`grid grid-cols-1 md:grid-cols-2 gap-8 transition-opacity duration-300 ${
             transitioning ? 'opacity-0' : 'opacity-100'
@@ -152,9 +180,9 @@ const Tabs = () => {
                 alt={project.title}
                 className="h-64 w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-black/50 p-4">
-                <h2 className="text-2xl uppercase font-thin text-[#c1dbce]">{project.title}</h2>
-                <p className="text-lg text-[#c1dbce]">{project.description}</p>
+            <div className="absolute bottom-0 left-0 right-0 bg-[#331C20]/70 p-4">
+                <h2 className="text-2xl uppercase font-thin text-[#EEDEE0]">{project.title}</h2>
+                <p className="text-lg text-[#EEDEE0]">{project.description}</p>
             </div>
             </div>
           ))}

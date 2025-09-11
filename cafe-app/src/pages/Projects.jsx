@@ -6,7 +6,7 @@ import Tabs from '../components/Tabs.jsx';
 export default function Projects() {
     return (
 
-    <div className="flex flex-col w-auto h-[140vh] items-center mt-[10vh] p-6 m-3">
+    <div className="flex flex-col w-auto h-[110vh] mt-[2vh] m-3">
         <Tabs />
     </div>
 

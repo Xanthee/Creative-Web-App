@@ -42,7 +42,7 @@ const Header = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-30 transition-transform duration-300
         ${isVisible ? 'translate-y-0' : '-translate-y-full'} 
-        bg-[#b5b0a8] shadow-md p-6 flex justify-between items-center`}
+        bg-[#ECC1C4] shadow-md p-6 flex justify-between items-center`}
       >
         <h1 className="font-bold text-3xl text-black">X</h1>
 
@@ -59,7 +59,7 @@ const Header = () => {
       {/* Fullscreen Menu Overlay */}
       {menuVisible && (
         <div
-          className={`fixed inset-0 z-50 bg-[#b5b0a8] flex flex-col items-center justify-center
+          className={`fixed inset-0 z-50 bg-[#ECC1C4] flex flex-col items-center justify-center
           transform transition-transform duration-700
           ${menuOpen ? 'translate-y-0' : '-translate-y-full'}
         `}
@@ -74,7 +74,7 @@ const Header = () => {
           </button>
 
           {/* Links */}
-          <ul className="space-y-10 text-[60px] md:text-[50px] lg:text-[60px] font-light text-[#675578] text-right w-1/2">
+          <ul className="space-y-10 text-[60px] md:text-[50px] lg:text-[60px] font-light text-[#3C151C] text-right w-1/2">
             {['HOME', 'ABOUT', 'PROJECTS', 'CONTACT'].map((text, i) => (
               <li
                 key={text}
