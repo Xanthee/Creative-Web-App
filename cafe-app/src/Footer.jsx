@@ -3,7 +3,7 @@ import { FaLinkedin , FaInstagram, FaGithub } from "react-icons/fa";
 
 export default function Footer() {
     return(
-        <footer className="vw-full flex flex-col m-3 p-5 border rounded-lg bg-[#331C20] h-[22vh] text-white">
+        <footer className="w-full flex flex-col  border rounded-lg bg-[#331C20] h-[22vh] text-white">
             <hr className="border-t border-gray-600 my-2" />
             <div className="flex flex-row h-full w-full pl-2 pr-2">
                 <span className="text-left font-light text-2xl w-1/4 h-full mr-4 text-base hover:text-3xl hover:tracking-wide font-tech transition-all duration-300"> Designed with curiosity and a lot of coffee</span>
@@ -11,9 +11,9 @@ export default function Footer() {
                     <div className="flex flex-row text-lg justify-between w-full pl-2 pr-2 mx-auto  ">
                         {/* Left links */}
                         <div className="flex flex-row space-x-6 ">
-                            <Link to="/location" className="text-white font-josefin font-light opacity-70 hover:opacity-100 transition-opacity duration-300">WORK</Link>
-                            <Link to="/location" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">ABOUT</Link>
-                            <Link to="/location" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">CONTACT</Link>
+                            <Link to="/projects" className="text-white font-josefin font-light opacity-70 hover:opacity-100 transition-opacity duration-300">PROJECTS</Link>
+                            <Link to="/about" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">ABOUT</Link>
+                            <Link to="/contacts" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">CONTACT</Link>
                         </div>
 
                         {/* Right links */}

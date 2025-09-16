@@ -2,7 +2,27 @@ import { Link } from "react-router-dom"
 import React from 'react';
 import "../index.css";
 import Images from '../components/Images.jsx';
+import Xanthe from '../assets/Xanthe.png';
+import ParallaxText from "../components/ParallaxText";
 import { motion } from "framer-motion";
+import { 
+  SiFigma, 
+  SiReact, 
+  SiHtml5, 
+  SiJavascript, 
+  SiNextdotjs, 
+  SiFramer 
+} from "react-icons/si";
+
+
+const icons = [
+  { Comp: SiFigma },
+  { Comp: SiReact },
+  { Comp: SiHtml5 },
+  { Comp: SiJavascript },
+  { Comp: SiNextdotjs },
+  { Comp: SiFramer },
+];
 
 export default function IndexPage() {
     return (
@@ -45,9 +65,57 @@ export default function IndexPage() {
             </div>
             <Images className="" />
         </div>
-        <div className="mt-2">
-            <h1 className="font-light font-josefin text-xl md:text-2xl lg:text-4xl">MY WORK</h1>
+        <div className="mt-12 mb-12 items-center h-auto w-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <div className="flex flex-col gap-8">
+            <div>
+                <h1 className="font-thin font-josefin text-2xl md:text-3xl lg:text-5xl mb-4">ABOUT ME</h1>
+                <span className="text-l md:text-xl lg:text-2xl">
+                    I’m a UI/UX designer and front-end developer who loves bringing ideas to life through clean,
+                    intuitive design. From wireframes to prototypes, I thrive on crafting experiences that feel
+                    effortless for users and valuable for businesses. My goal? To turn big challenges into simple,
+                    meaningful solutions that people actually enjoy using.
+                </span>
+                </div>
+
+                <div>
+                <h1 className="font-thin font-josefin text-2xl md:text-3xl lg:text-5xl mt-8 mb-4">TOOLS</h1>
+                <div className="grid grid-cols-3 gap-6 place-items-start">
+                    {icons.map(({ Comp }, i) => (
+                    <motion.div
+                        key={i}
+                        initial={{ opacity: 0, scale: 0.5, y: 30 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.6, delay: i * 0.1 }}
+                    >
+                        <Comp className="text-6xl" />
+                    </motion.div>
+                    ))}
+                </div>
+            </div>
         </div>
+
+
+            <div className="h-[60vh] flex items-center justify-center ">
+                <img 
+                    src={Xanthe} 
+                    alt="Xanthe" 
+                    className="h-full object-contain" 
+                />
+            </div>
+        </div>
+
+        <section className="w-screen my-10 flex flex-col items-center justify-center gap-4 
+                        h-auto min-h-[10vh] md:min-h-[15vh] lg:min-h-[20vh]">
+        <ParallaxText baseVelocity={-1}>
+            NEXTJS REACTJS HTML JAVASCRIPT GSAP CSS
+        </ParallaxText>
+        <ParallaxText baseVelocity={1}>
+            REACT-NATIVE FIGMA NOTION FRAMER-MOTION
+        </ParallaxText>
+        </section>
+
     </div>
     
 
