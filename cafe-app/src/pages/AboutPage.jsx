@@ -16,7 +16,7 @@ export default function AboutPage() {
                     <p className="text-l md:text-l lg:text-l mb-12">I code responsive websites (HTML, CSS, JavaScript), design intuitive interfaces (Figma, Adobe Creative Suite), and build custom WordPress sites. I’ve also worked on UX research, branding, and marketing projects, balancing aesthetics with functionality. I’m always learning new tools and techniques!</p>                
                     <h1 className="font-light font-josefin text-xl md:text-2xl lg:text-4xl mb-4">MY APPROACH</h1>
                     <p className="text-l md:text-l lg:text-l mb-12">I focus on understanding users to create clean, accessible, and engaging solutions, whether I’m coding a site, designing a logo, or testing user flows.</p>
-                    <h1 className="font-light font-josefin text-xl md:text-2xl lg:text-4xl mb-4">BEYOND WORD</h1>
+                    <h1 className="font-light font-josefin text-xl md:text-2xl lg:text-4xl mb-4">BEYOND WORK</h1>
                     <p className="text-l md:text-l lg:text-l mb-12">When I’m not working, you’ll find me illustrating, diving into horror movies, or battling it out in competitive games (maybe a bit too much!). Offline, I enjoy being with friends, playing backgammon, hitting the ski slopes, and prioritizing self-care. My creative and curious nature fuels my work, and I’m excited to collaborate on projects that blend design, tech, and user focus.</p>
                 </div>
             </div>

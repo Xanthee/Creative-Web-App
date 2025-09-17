@@ -13,13 +13,13 @@ export default function Footer() {
                         <div className="flex flex-row space-x-6 ">
                             <Link to="/projects" className="text-white font-josefin font-light opacity-70 hover:opacity-100 transition-opacity duration-300">PROJECTS</Link>
                             <Link to="/about" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">ABOUT</Link>
-                            <Link to="/contacts" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">CONTACT</Link>
+                            <Link to="/contact" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">CONTACT</Link>
                         </div>
 
                         {/* Right links */}
                         <div className="flex flex-row space-x-6">
-                            <Link to="/location" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">TOOLS</Link>
-                            <Link to="/location" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">DRAWING</Link>
+                            <Link to="/frontend" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">FRONT-END</Link>
+                            <Link to="/uxdesign" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">UX DESIGN</Link>
                         </div>
                     </div>
 

@@ -89,53 +89,6 @@ const Tabs = () => {
           description: "A website made for a charity."
         }
       ]
-    },
-    {
-      id: 4,
-      title: "EXPERIMENTS",
-      projects: [
-        {
-          title: "Portfolio Designs",
-          image: PortfolioDesign,
-          description: "Testing an idea I had for my HTML portfolio, with interactive scrolling."
-        },
-        {
-          title: "Mouse movement in React",
-          image: MouseExperiment,
-          description: "I drew different layers that moved based on mouse movement"
-        },
-        {
-          title: "Bitsy Game",
-          image: Bitsy,
-          description: "A small project in Bitsy about doing quests for ghosts."
-        },
-        {
-          title: "3D Modelling environments",
-          image: HouseModel,
-          description: "Trying Blender and creating an environment from my own skills."
-        }
-      ]
-    },
-    {
-      id: 5,
-      title: "Designs",
-      projects: [
-        {
-          title: "UseBy",
-          image: UseByDesign,
-          description: "Using Figma, I was able to create this UI for the app."
-        },
-        {
-          title: "Luna Cafe",
-          image: LunaCafeDesign,
-          description: "This was created in Figma to map out the website UI."
-        },
-        {
-          title: "3D Modelling Planets",
-          image: PlanetModels,
-          description: "Using Spline to create and learn the different ways to 3D model"
-        }
-      ]
     }
   ];
 
@@ -150,9 +103,9 @@ const Tabs = () => {
   };
 
   return (
-    <div className="w-full mt-28">
+    <div className="w-full mt-12">
       <div className="flex justify-center mb-6">
-        <span className="left-nav-link text-3xl font-light uppercase">PROJECTS</span>
+        <span className="left-nav-link text-3xl font-light uppercase">FRONT-END DEVELOPMENT PROJECTS</span>
       </div>
       <div className="flex justify-center mb-4">
         {tabContent.map((tab, index) => (
