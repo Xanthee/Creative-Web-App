@@ -4,17 +4,18 @@ import "../index.css";
 import Blender from '../assets/3DBlenderModel.mp4';
 import { motion } from "framer-motion";
 import Spline from '@splinetool/react-spline';
+import LRWork from '../assets/LRAnimationsWork.png';
 
 export default function CreativeWorkPage() {
     return (
-        <div className="min-h-screen w-full md:w-[90%] mt-[10vh] mx-auto flex flex-col items-center justify-center p-4 space-y-12">
+        <div className="h-auto w-full md:w-[90%] mt-[10vh] mx-auto flex flex-col items-center justify-center space-y-12">
             <motion.h1
                 className="font-thin font-josefin text-4xl md:text-6xl lg:text-7xl mb-6 mt-12"
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
             >
-                CREATIVE & VISUAL WORDS
+                CREATIVE & VISUAL WORKS
             </motion.h1> 
             
             {/* First Grid: Video and Text */}
@@ -46,7 +47,6 @@ export default function CreativeWorkPage() {
                 </div>
             </div>
 
-            {/* Second Grid: Spline Models and Text */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl h-auto w-full">
                 <div className="w-full h-full aspect-video bg-[#331C20]/70 rounded-xl">
                     <Spline
@@ -69,6 +69,23 @@ export default function CreativeWorkPage() {
                     />
                 </div>
             </div>
+            <div className="w-auto flex flex-col grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="flex flex-col  justify-center items-center">
+                    <div className="h-auto w-[90%]">
+                        <h1 className="font-thin font-josefin text-2xl md:text-4xl lg:text-6xl mb-4">WHO AM I</h1>
+                        <p className="text-l md:text-l lg:text-l mb-12">I’m a recent Bath Spa University grad passionate about creating user-friendly, visually stunning digital experiences. As a front-end developer, UX/UI designer, and graphic designer, I blend creativity and tech to build impactful websites, interfaces, and designs.</p>              
+                    </div>
+                </div>
+                <div className="flex flex-row w-full max-w-full items-center justify-center mt-10">
+                    <div className=" max-w-full">
+                        <img 
+                            src={LRWork} 
+                            className="w-full h-auto object-contain" 
+                        />
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 }
