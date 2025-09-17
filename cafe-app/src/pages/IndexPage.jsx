@@ -35,7 +35,7 @@ export default function IndexPage() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    HI, IM XANTHE
+                    HI, I'M XANTHE
                 </motion.h1>
 
                 <motion.h1

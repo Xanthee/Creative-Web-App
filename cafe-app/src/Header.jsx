@@ -75,7 +75,7 @@ const Header = () => {
 
           {/* Links */}
           <ul className="space-y-10 text-[60px] md:text-[50px] lg:text-[60px] font-light text-[#3C151C] text-right w-1/2">
-            {['HOME', 'ABOUT', 'PROJECTS', 'CONTACT'].map((text, i) => (
+            {['HOME', 'ABOUT', 'EXPERIENCE', 'CONTACT'].map((text, i) => (
               <li
                 key={text}
                 className={`transform transition-all duration-1050 ease-out

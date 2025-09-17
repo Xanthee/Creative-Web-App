@@ -1,7 +1,7 @@
 import './App.css'
 import {Route, Routes} from "react-router-dom";
 import IndexPage from "./pages/IndexPage.jsx";
-import Projects from "./pages/Projects.jsx";
+import Experience from "./pages/ExperiencePage.jsx";
 import About from "./pages/AboutPage.jsx";
 import Contact from "./pages/ContactPage.jsx";
 import FrontEnd from "./pages/FrontEndPage.jsx";
@@ -15,7 +15,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<IndexPage />}/>
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/experience" element={<Experience />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/frontend" element={<FrontEnd />} />

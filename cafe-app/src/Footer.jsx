@@ -11,7 +11,7 @@ export default function Footer() {
                     <div className="flex flex-row text-lg justify-between w-full pl-2 pr-2 mx-auto  ">
                         {/* Left links */}
                         <div className="flex flex-row space-x-6 ">
-                            <Link to="/projects" className="text-white font-josefin font-light opacity-70 hover:opacity-100 transition-opacity duration-300">PROJECTS</Link>
+                            <Link to="/experience" className="text-white font-josefin font-light opacity-70 hover:opacity-100 transition-opacity duration-300">EXPERIENCE</Link>
                             <Link to="/about" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">ABOUT</Link>
                             <Link to="/contact" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">CONTACT</Link>
                         </div>

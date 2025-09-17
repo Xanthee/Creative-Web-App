@@ -6,7 +6,7 @@ import "../index.css";
 export default function AboutPage() {
     return (
 
-    <div className="h-[120vh] w-[90%] mt-[10vh] m-10 flex items-center justify-center">
+    <div className="max-w-full w-full mt-[10vh] mx-auto px-4 sm:px-6 md:px-8 flex items-center justify-center">
         <div className="w-[90vw] flex flex-col grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="flex flex-col  justify-center items-center">
                 <div className="h-auto w-[90%]">
@@ -20,12 +20,12 @@ export default function AboutPage() {
                     <p className="text-l md:text-l lg:text-l mb-12">When I’m not working, you’ll find me illustrating, diving into horror movies, or battling it out in competitive games (maybe a bit too much!). Offline, I enjoy being with friends, playing backgammon, hitting the ski slopes, and prioritizing self-care. My creative and curious nature fuels my work, and I’m excited to collaborate on projects that blend design, tech, and user focus.</p>
                 </div>
             </div>
-            <div className="flex flex-row w-[100%] justify-around">
-                <div className="h-auto">
+            <div className="flex flex-row w-full max-w-full items-center justify-center mt-10">
+                <div className="h-auto max-w-full">
                     <img 
                         src={AboutMeCollage} 
                         alt="Xanthe" 
-                        className="h-full object-contain" 
+                        className="w-full max-w-full h-auto object-contain" 
                     />
                 </div>
             </div>
