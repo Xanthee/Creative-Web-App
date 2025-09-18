@@ -11,3 +11,9 @@ input[type="text"], input[type="password"], input[type="email"], input[type="nam
 body {
   overflow-x: hidden;
 }
+
+@media (max-width: 640px) {
+  .no-horizontal-scroll {
+    overflow-x: hidden;
+  }
+}
