@@ -8,7 +8,7 @@ import UseByPost from "../assets/UseByPost.png";
 
 export default function UXResearchPage() {
   return (
-    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden mx-auto flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen w-full max-w-[100vw] mt-20 overflow-x-hidden mx-auto flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
       {/* Heading */}
       <motion.h1
         className="font-thin font-josefin text-2xl sm:text-3xl md:text-5xl lg:text-6xl mb-6 sm:mb-8 mt-6 sm:mt-8"
