@@ -25,19 +25,14 @@ export default function Footer() {
 
                     <div className="flex flex-row pl-2 justify-between">
                         <div className="space-x-3 flex flex-row items-end">
-                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/Xanthee" target="_blank" rel="noopener noreferrer">
                                 <FaGithub 
                                     className="text-3xl text-white transition-transform transition-colors duration-300 hover:text-gray-400 hover:rotate-[20deg] hover:scale-110" 
                                 />
                             </a>
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            <a href="linkedin.com/in/xanthe-parsons-7b5080223/?skipRedirect=true" target="_blank" rel="noopener noreferrer">
                                 <FaLinkedin 
                                     className="text-3xl text-white transition-transform transition-colors duration-300 hover:text-blue-400 hover:rotate-[20deg] hover:scale-110" 
-                                />
-                            </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                                <FaInstagram 
-                                    className="text-3xl text-white transition-transform transition-colors duration-300 hover:text-pink-400 hover:rotate-[20deg] hover:scale-110" 
                                 />
                             </a>
                         </div>

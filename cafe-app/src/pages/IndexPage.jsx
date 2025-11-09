@@ -55,7 +55,7 @@ export default function IndexPage() {
                     />
                     <button
                         className="ml-4 px-4 py-2 bg-[#331C20] text-[#EEDEE0] rounded"
-                        onClick={() => window.open("/Xanthe_Parsons_CV.pdf", "_blank")}
+                        onClick={() => window.open("/Xanthe-CV.pdf", "_blank")}
                     >
                         CV
                     </button>
