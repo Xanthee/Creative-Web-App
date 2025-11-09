@@ -1,48 +1,56 @@
-import { Link } from "react-router-dom"
-import { FaLinkedin , FaInstagram, FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 export default function Footer() {
-    return(
-        <footer className="w-full flex flex-col  border rounded-lg bg-[#331C20] h-[22vh] text-white">
-            <hr className="border-t border-gray-600 my-2" />
-            <div className="flex flex-row h-full w-full pl-2 pr-2">
-                <span className="text-left font-light text-2xl w-1/4 h-full mr-4 text-base hover:text-3xl hover:tracking-wide font-tech transition-all duration-300"> Designed with curiosity and a lot of coffee</span>
-                <div className="flex flex-col h-full w-3/4 justify-between">
-                    <div className="flex flex-row text-lg justify-between w-full pl-2 pr-2 mx-auto  ">
-                        {/* Left links */}
-                        <div className="flex flex-row space-x-6 ">
-                            <Link to="/experience" className="text-white font-josefin font-light opacity-70 hover:opacity-100 transition-opacity duration-300">EXPERIENCE</Link>
-                            <Link to="/about" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">ABOUT</Link>
-                            <Link to="/contact" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">CONTACT</Link>
-                        </div>
+  return (
+    <footer className="w-full bg-[#331C20] text-white">
+      <div className="max-w-screen-xl mx-auto px-4 py-6">
+        {/* top row */}
+        <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
+          <div className="w-full sm:w-1/3">
+            <span className="block font-light text-sm sm:text-base">
+              Designed with curiosity and a lot of coffee
+            </span>
+          </div>
 
-                        {/* Right links */}
-                        <div className="flex flex-row space-x-6">
-                            <Link to="/frontend" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">FRONT-END</Link>
-                            <Link to="/uxdesign" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">UX DESIGN</Link>
-                        </div>
-                    </div>
+          <div className="w-full sm:w-2/3 flex flex-col">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 w-full">
+              {/* Left links */}
+              <div className="flex flex-row flex-wrap gap-4">
+                <Link to="/experience" className="text-white font-josefin font-light opacity-70 hover:opacity-100 transition-opacity duration-300">EXPERIENCE</Link>
+                <Link to="/about" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">ABOUT</Link>
+                <Link to="/contact" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">CONTACT</Link>
+              </div>
 
-                    <div className="flex flex-row pl-2 justify-between">
-                        <div className="space-x-3 flex flex-row items-end">
-                            <a href="https://github.com/Xanthee" target="_blank" rel="noopener noreferrer">
-                                <FaGithub 
-                                    className="text-3xl text-white transition-transform transition-colors duration-300 hover:text-gray-400 hover:rotate-[20deg] hover:scale-110" 
-                                />
-                            </a>
-                            <a href="linkedin.com/in/xanthe-parsons-7b5080223/?skipRedirect=true" target="_blank" rel="noopener noreferrer">
-                                <FaLinkedin 
-                                    className="text-3xl text-white transition-transform transition-colors duration-300 hover:text-blue-400 hover:rotate-[20deg] hover:scale-110" 
-                                />
-                            </a>
-                        </div>
-                        <div className="w-1/4 text-xs">
-                            <span className="opacity-70">This website was designed and developed by me, using React frameworks. All work, unless credited, is my own.</span>
-                        </div>
-                    </div>
-                </div>
+              {/* Right links */}
+              <div className="flex flex-row flex-wrap gap-4">
+                <Link to="/frontend" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">FRONT-END</Link>
+                <Link to="/uxdesign" className="text-white opacity-70 hover:opacity-100 transition-opacity duration-300">UX DESIGN</Link>
+              </div>
             </div>
-            <hr className="border-t border-gray-600 my-2" />
-        </footer>
-    );
+
+            <div className="mt-4 flex flex-row justify-between items-center">
+              <div className="flex items-center gap-3">
+                <a href="https://github.com/Xanthee" target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="text-2xl sm:text-3xl text-white transition-transform transition-colors duration-300 hover:text-gray-400 hover:rotate-[20deg] hover:scale-110" />
+                </a>
+                <a href="https://www.linkedin.com/in/xanthe-parsons-7b5080223/" target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin className="text-2xl sm:text-3xl text-white transition-transform transition-colors duration-300 hover:text-blue-400 hover:rotate-[20deg] hover:scale-110" />
+                </a>
+              </div>
+
+              <div className="hidden sm:block w-1/3 text-xs text-right">
+                <span className="opacity-70">This website was designed and developed by me, using React frameworks. All work, unless credited, is my own.</span>
+              </div>
+            </div>
+
+            {/* small-screen footer note */}
+            <div className="block sm:hidden mt-3 text-xs">
+              <span className="opacity-70">This website was designed and developed by me, using React frameworks. All work, unless credited, is my own.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 }
